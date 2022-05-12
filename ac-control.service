@@ -1,0 +1,11 @@
+[Unit]
+Description=restarts ac-control services
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/root/ac-control/restart.sh
+
+[Install]
+WantedBy=multi-user.target
